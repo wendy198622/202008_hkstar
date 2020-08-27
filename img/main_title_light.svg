@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="536.148" height="148.52" viewBox="0 0 536.148 148.52">
+  <g id="main_title_light" transform="translate(-426.523 -520.16)">
+    <g id="Group_4" data-name="Group 4">
+      <text id="智能健康宅" transform="translate(435.073 592.16)" fill="#b68e66" font-size="68.011" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">智能健康宅</tspan></text>
+      <g id="Group_3" data-name="Group 3">
+        <text id="_2_3" data-name=" 2~3" transform="translate(769.067 593.536)" fill="#6a2259" font-size="41.451" font-family="Helvetica"><tspan x="0" y="0"> </tspan><tspan y="0" font-size="76.103">2~3</tspan></text>
+        <circle id="Ellipse_1" data-name="Ellipse 1" cx="15.754" cy="15.754" r="15.754" transform="translate(899.611 563.287)" fill="#6a2259"/>
+        <text id="房" transform="translate(903.388 587.528)" fill="#fff" font-size="24.381" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">房</tspan></text>
+      </g>
+    </g>
+    <g id="Group_5" data-name="Group 5">
+      <text id="羅東捷運站旁_到站即到家" data-name="羅東捷運站旁．到站即到家" transform="translate(436.709 653.68)" fill="#6a2259" font-size="42.947" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">羅東捷運站旁．到站即到家</tspan></text>
+      <line id="Line_1" data-name="Line 1" y2="44.675" transform="translate(962.183 615.455)" fill="none" stroke="#b68e66" stroke-miterlimit="10" stroke-width="0.975"/>
+      <line id="Line_2" data-name="Line 2" y2="44.675" transform="translate(427.01 615.455)" fill="none" stroke="#b68e66" stroke-miterlimit="10" stroke-width="0.975"/>
+    </g>
+  </g>
+</svg>
