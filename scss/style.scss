@@ -5,7 +5,17 @@ $font-Ming: 'Noto Serif TC', serif;
 
 *{ box-sizing: border-box; color: #362e2b; font-family: 'Noto Sans TC', sans-serif;}
 a{ color: #000000;}
-img{ width: 100%; display: block; margin: 0 auto;}
+img{ 
+    width: 100%; 
+    display: block; 
+    margin: 0 auto;
+    &.pc{ display: block;}
+    &.mob{ display: none;}
+    @media (max-width:1000px) {
+        &.pc{ display: none;}
+        &.mob{ display: block;}
+    }
+}
 
 section{
     width: 100%;
@@ -20,6 +30,9 @@ section{
         letter-spacing: 2px;
         font-weight: 700;
         margin-top: 20px;
+        @media (max-width:1000px) {
+            font-size: 32px;
+        }
     }
     p{
         width: 100%;
@@ -30,11 +43,13 @@ section{
     }
 }
 .container{
-    width: 100%;
-    max-width: 1400px;
+    width: 1360px;
     margin: 0 auto;
     @media (max-width:1400px) {
-        max-width: 1000px;
+        width: 960px;
+    }
+    @media (max-width:1000px) {
+        max-width: 100%;
     }
 }
 .mainBox{
@@ -51,14 +66,25 @@ section{
         .txtBox{
             width: calc(500/1920*100%);
             position: absolute;
-            top: 0;
+            top: -7%;
             left: calc(440/1920*100%);
+            @media (max-width:1000px) {
+                width: 100%;
+                left: 0;
+            }
             h1{
                 width: calc(411/535*100%);
                 margin: 0 auto;
+                @media (max-width:1000px) {
+                    width: 50%
+                }
             }
             h2, img{
                 width: 100%;
+                margin: 0 auto;
+                @media (max-width:1000px) {
+                    width: 85%
+                }
             }
         }
     }
@@ -178,6 +204,9 @@ nav.contact{
     top: 120px;
     background-color: #6A2259;
     border-radius: 40px;
+    @media (max-width:1000px) {
+        display: none;
+    }
     ul{
         padding: 15px 10px;
         li{
@@ -207,6 +236,9 @@ nav.contact{
 .section1{
     padding-top: 130px;
     padding-bottom: 130px;
+    @media (max-width:1000px) {
+        padding-bottom: calc(10% - 8px;)
+    }
     .container{ 
         &:after{
             content: "";
@@ -218,6 +250,11 @@ nav.contact{
         width: calc(900/1400*100%);
         float: left;
         position: relative;
+        @media (max-width:1000px) {
+            width: 100%;
+            float: unset;
+            margin: 0 auto;
+        }
         &::before{
             content: "";
             width: 100%;
@@ -227,6 +264,15 @@ nav.contact{
             left: 0;
             top: 50%;
             transform: translateY(-50%);
+            @media (max-width:1000px) {
+                height: 70%;
+                top: unset;
+                bottom: -10%;
+                transform: translateY(0%); 
+
+
+
+            }
         }
         .photos{
             width: calc(760/950*100%);
@@ -240,9 +286,20 @@ nav.contact{
         width: calc(450/1400*100%);
         max-width: 300px;
         height: 400px;
-        float: left;
-        margin-left: 25px;
+        float: right;
+        margin-right: 8%;
         margin-top: 230px;
+        @media (max-width:1000px) {
+            width: 40%;
+            max-width: 40%;
+            margin-top: 0;
+            float: unset;
+            margin-left: 10%;
+        }
+        @media (max-width:768px) {
+            width: 70%;
+            max-width: 70%;
+        }
         h3{
             width: 100%;
             
@@ -251,18 +308,36 @@ nav.contact{
 }
 .section2{
     background: url(../img/section2_mapbg.png) right center no-repeat #42526C;
+    background-size: 100% auto;
     padding: 10% 5% 10% 10%;
+    @media (max-width:1000px) {
+        background-size: 120% auto;
+        padding: 0;
+    }
     .mapBox{
         width: calc(1050/1400*100%);
         float: right;
-        
+        @media (max-width:1000px) {
+            width: 100%;
+            float: unset;
+            margin: 0 auto;
+            padding: 0 0 10% 0;
+        }        
     }
     .txtBox{
         width: calc(300/1920*100%);
         float: left;
         padding-top: 8%;
+        @media (max-width:1000px) {
+            width: 56%;
+            padding-bottom: 5%;
+            float: unset;
+        }
         
         ul{
+            @media (max-width:1000px) {
+                display: none;
+            }
             li{
                 margin-top: 50px;
             }
@@ -272,10 +347,13 @@ nav.contact{
 .section3{
     padding: 10% 0 0 10%;
     position: relative;
+    @media (max-width:1000px) {
+        padding: 10% 0 0 0;
+    }
     &:before{
         content: "";
         width: 100%;
-        height: 347px;
+        height: 40%;
         background-color: #6A2259;
         position: absolute;
         z-index: -1;
@@ -284,19 +362,53 @@ nav.contact{
     }
     h3.en{
         width: calc(996/1920*100%);
+        position: relative;
+        z-index: 3;
+        @media (max-width:1000px) {
+            display: none;
+        }
     }
     .txtBox{
         width: calc(420/1920*100%);
         float: left;
+        overflow: hidden;
+        &.mob{ display: none;}
+        &.pc{
+            img{ display: block;}
+        }
+        @media (max-width:1000px) {
+            width: 80%;
+            max-width: 80%;
+            float: unset;
+            margin-left: 10%;
+            &.mob{ display: block;}
+            &.pc{
+                img{ display: none;}
+            }
+        }
         img{
             width: 100%;
             margin-top: 20px;
+            @media (max-width:1000px) {
+                width: 49%;
+                margin-right: 2%;
+                float: left;
+                &:last-child{ margin-right: 0;}
+            }
         }
     }
     .imgBox{
-        width: calc(1426/1920*100%);
-        float: right;
+        width: calc(1300/1920*100%);
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        // float: right;
         margin-top: -2%;
+        @media (max-width:1000px) {
+            width: 80%;
+            // float: unset;
+            margin-left: 10%;
+        }
         
     }
 }
@@ -311,17 +423,30 @@ nav.contact{
         z-index: -1;
         left: 0;
         top: 0;
+        @media (max-width:1000px) {
+            height: 0;
+            padding-bottom: 25%;
+        }
     }
     .txtBox{
         width: 100%;
         margin-top: 7%;
         overflow: hidden;
+        @media (max-width:1000px) {
+            margin-top: 0;
+        }
         h3{
             float: left;
             margin-top: 3.8%;
+            @media (max-width:1000px) {
+                width: 80%;
+                float: unset;
+                margin-left: 10%;
+            }
             &.en{ 
                 float: right;
                 margin-top: 0;
+                display: none;
             }
         }
     }
@@ -331,22 +456,51 @@ nav.contact{
             margin-top: 20px;
             overflow: hidden;
             background-color: #42526C;
+            @media (max-width:1000px) {
+                position: relative;
+                background-color: #fff;
+            }
             .txtBox{
                 width: calc(600/1400*100%);
                 float: left;
                 padding: 8% 0;
+                @media (max-width:1000px) {
+                    width: 50%;
+                    height: 80%;
+                    float: unset;
+                    position: absolute;
+                    z-index: 3;
+                    top: 10%;
+                    left: 5%;
+                    padding: 20% 0;
+                    background-color: rgba(66,82,108,.8);
+                    img{ width: 100%;}
+                }
             }
             .imgBox{
                 width: calc(800/1400*100%);
                 float: right;
+                @media (max-width:1000px) {
+                    width: 90%;
+                }
                 .photo{
                     margin-bottom: -4px;
                 }
             }
             &:nth-child(even){
                 background-color: #6A2259;
+                @media (max-width:1000px) {
+                    position: relative;
+                    background-color: #fff;
+                }
                 .txtBox{
                     float: right;
+                    @media (max-width:1000px) {
+                        float: unset;
+                        left: unset;
+                        right: 5%;
+                        background-color: rgba(106,34,89,.8);
+                    }
                 }
                 .imgBox{
                     float: left;
@@ -356,21 +510,33 @@ nav.contact{
             &:nth-child(1){
                 .txtBox img{
                     width: calc(267/600*100%);
+                    @media (max-width:1000px) {
+                        transform: scale(1.6);
+                    }
                 }
             }
             &:nth-child(2){
                 .txtBox img{
                     width: calc(170/600*100%);
+                    @media (max-width:1000px) {
+                        transform: scale(1.6);
+                    }
                 }
             }
             &:nth-child(3){
                 .txtBox img{
                     width: calc(237/600*100%);
+                    @media (max-width:1000px) {
+                        transform: scale(1.6);
+                    }
                 }
             }
             &:nth-child(4){
                 .txtBox img{
                     width: calc(211/600*100%);
+                    @media (max-width:1000px) {
+                        transform: scale(1.6);
+                    }
                 }
             }
         }
@@ -385,12 +551,15 @@ nav.contact{
     &:before{
         content: "";
         width: 100%;
-        height: 347px;
+        height: 36%;
         background-color: #6A2259;
         position: absolute;
         z-index: -1;
         left: 0;
         bottom: 50px;
+        @media (max-width:1400px) {
+            height: 18%;
+        }
     }
     .container{ 
         &:after{
@@ -405,11 +574,19 @@ nav.contact{
         margin-bottom: -1.5%;
         position: relative;
         z-index: 2;
+        @media (max-width:1000px) {
+            display: none;
+        }
     }
     .imgBox{
         width: calc(800/1400*100%);
         float: left;
         position: relative;
+        @media (max-width:1000px) {
+            width: 80%;
+            float: unset;
+            margin-left: 10%;
+        }
         .photos{
             width: calc(760/950*100%);
             margin: 0 auto;
@@ -422,11 +599,20 @@ nav.contact{
         width: calc(461/1400*100%);
         max-width: 461px;
         height: 400px;
-        float: left;
+        float: right;
         margin-left: 25px;
-        // margin-top: 230px;
+        @media (max-width:1000px) {
+            width: 80%;
+            max-width: 80%;
+            margin-top: 0;
+            float: unset;
+            margin-left: 10%;
+        }
         h3{
             width: calc(301/461*100%);
+            @media (max-width:1000px) {
+                width: 100%;
+            }
         }
         img{
             margin-top: 35px;
@@ -439,10 +625,19 @@ nav.contact{
         width: 100%;
         margin-top: 7%;
         overflow: hidden;
+        @media (max-width:1000px) {
+            width: 90%;
+            margin-left: 10%;
+        }
         h3{
+            width: 48%;
             float: left;
             &.en{ 
+                width: 52%;
                 float: right;
+                @media (max-width:1000px) {
+                    display: none;
+                }
             }
         }
     }
@@ -462,6 +657,23 @@ nav.contact{
                         color: #fff;
                         font-size: 14px;
                         font-weight: normal;
+                        @media (max-width:1000px) {
+                            position: static;
+                            left: unset;
+                            bottom: unset;
+                            color: #000;
+                            background-color: transparent;
+                            position: relative;
+                            &:before{
+                                content: "";
+                                width: 100px;
+                                height: 1px;
+                                background-color: #B78E66;;
+                                position: absolute;
+                                top: 0;
+                                left: 6%;
+                            }
+                        }
                     }
                 }
             }
@@ -474,49 +686,27 @@ nav.contact{
         overflow: hidden;
         h3{
             width: calc(565/1920*100%);
+            @media (max-width:1000px) {
+                width: 90%;
+                margin-right:10%;
+            }
         }
         .container{
             display: table;
         }
         .imgBox{
             &:nth-child(1){
-                width: calc(480/1400*100%);
-                float: left;
-                margin-right: calc(-154/1400*100%);
-                margin-top: 50px;
-                position: relative;
-                z-index: 3;
-                img{
-                    position: relative;
-                    z-index: 2;
-                }
-                p{
-                    position: relative;
-                    z-index: 2;
-                    color: #fff;
-                    padding: 0px 10px 20px 30px;
-                }
-                &:after{
-                    content: "";
-                    width: 100%;
-                    height: 0;
-                    padding-bottom: 110%;
-                    position: absolute;
-                    z-index: 1;
-                    right: -10px;
-                    bottom: 0;
-                    background-color: #B78E66;
-                    box-shadow: 2px 2px 5px rgba(0,0,0,.6);
-                    
-                }
-            }
-            &:nth-child(2){
                 width: calc(1074/1400*100%);
                 float: right;
                 margin-top: -7%;
                 margin-bottom: 30px;
                 position: relative;
                 z-index: 2;
+                @media (max-width:1000px) {
+                    width: 92%;
+                    margin-right: 4%;
+                    margin-top: 7%;
+                }
                 img{
                     position: relative;
                     z-index: 2;
@@ -535,13 +725,74 @@ nav.contact{
                     
                 }
             }
+            &:nth-child(2){
+                width: calc(480/1400*100%);
+                float: left;
+                margin-right: calc(-154/1400*100%);
+                margin-top: 50px;
+                position: relative;
+                z-index: 3;
+                @media (max-width:1000px) {
+                    width: 96%;
+                    margin-top: -10%;
+                    margin-right: 4%;
+                    margin-bottom: 30px;
+                }
+                img{
+                    position: relative;
+                    z-index: 2;
+                    @media (max-width:1000px) {
+                        width: 50%;
+                        float: left;
+                    }
+                }
+                p{
+                    position: relative;
+                    z-index: 2;
+                    color: #fff;
+                    padding: 0px 10px 20px 30px;
+                    @media (max-width:1000px) {
+                        padding-left: 55%;
+                        padding-top: 14%;
+                        font-size: 16px;
+                    }
+                }
+                &:after{
+                    content: "";
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 40%;
+                    position: absolute;
+                    z-index: 1;
+                    right: -10px;
+                    bottom: 0;
+                    background-color: #B78E66;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,.6);
+                    @media (max-width:1000px) {
+                        bottom: -10px;
+                    }
+                    
+                }
+            }
             &:nth-child(3){
                 width: calc(694/1400*100%);
                 float: left;
+                @media (max-width:1000px) {
+                    width: 92%;
+                    float: unset;
+                    margin: 0 auto;
+                    // padding-top: 10%;
+                }
             }
             &:nth-child(4){
                 width: calc(694/1400*100%);
                 float: right;
+                @media (max-width:1000px) {
+                    width: 92%;
+                    float: unset;
+                    margin: 0 auto;
+                    margin-top: 20px;
+                }
             }
         }
         p.desc{
@@ -552,6 +803,10 @@ nav.contact{
             color: #fff;
             padding: 10px 0;
             margin-top: 30px;
+            @media (max-width:1000px) {
+                width: 90%;
+                margin: 30px auto 0;
+            }
             &:before{
                 content: "";
                 width: 100px;
@@ -570,10 +825,17 @@ nav.contact{
         width: 100%;
         margin-top: 7%;
         overflow: hidden;
+        @media (max-width:1000px) {
+            width: 90%;
+            margin-left: 10%;
+        }
         h3{
             float: left;
             &.en{ 
                 float: right;
+                @media (max-width:1000px) {
+                    display: none;
+                }
             }
         }
     }
@@ -595,6 +857,24 @@ nav.contact{
                     color: #fff;
                     font-size: 14px;
                     font-weight: normal;
+                    @media (max-width:1000px) {
+                        width: 90%;
+                        // margin: 30px auto 0;
+                        position: static;
+                        background-color: transparent;
+                        color: #000;
+                        position: relative;
+                        padding: 20px 0;
+                        &:before{
+                            content: "";
+                            width: 100px;
+                            height: 1px;
+                            background-color: #B78E66;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
                 }
             }
         }
@@ -711,22 +991,60 @@ nav.contact{
     background-color: #42526C;
     padding-top: 130px;
     padding-bottom: 130px;
+    @media (max-width:1000px) {
+        overflow: visible;
+        padding-top: 0;
+        background-color: transparent;
+        position: relative;
+        &:after{
+            content: "";
+            width: 100%;
+            height: 92%;
+            position: absolute;
+            z-index: -1;
+            right: 0px;
+            bottom: 0px;
+            background-color: #42526C;
+        }
+    }
     .txtBox{
         width: calc(563/1920*100%);
         float: left;
         margin-left: calc(200/1920*100%);
+        @media (max-width:1000px) {
+            width: 100%;
+            margin-left: 0%;
+            float: unset;
+        }
+        h3{
+            width: 60%;
+            margin-left: 10%;
+        }
         h3.en{
             width: calc(464/563*100%);
+            @media (max-width:1000px) {
+                display: none;;
+            }
         }
         p{ 
             width: calc(500/563*100%);
             color: #fff;
+            @media (max-width:1000px) {
+                width: 100%;
+                padding: 10%;
+            }
         }
     }
     .imgBox{
         width: calc(1157/1920*100%);
         float: left;
         padding: 0 0 0 50px;
+        @media (max-width:1000px) {
+            width: 70%;
+            margin-left: 15%;
+            float: unset;
+            padding: 0;
+        }
         &:before{
             content: "";
             width: 100%;
@@ -739,6 +1057,10 @@ nav.contact{
         .photo{
             padding: 0 20px;
             text-align: center;
+            @media (max-width:1000px) {
+                width: 90%;
+                margin: 0 auto;
+            }
             span{
                 display: block;
                 margin-top: 20px;
@@ -761,13 +1083,28 @@ nav.contact{
         z-index: -1;
         bottom: 0;
         left: 0;
+        @media (max-width:1400px) {
+            height: 460px
+
+        }
+        @media (max-width:1000px) {
+            height: 75%;
+        }
     }
     .container{
         min-width: 1155px;
+        @media (max-width:1000px) {
+            min-width: 100%;
+        }
     }
     .txtBox{
         width: calc(495/1400*100%);
         float: left;
+        @media (max-width:1000px) {
+            width: 90%;
+            float: unset;
+            margin: 0 auto;
+        }
         .logo{
             width: calc(313/495*100%);
             margin: 0 auto;
@@ -775,6 +1112,9 @@ nav.contact{
         .title{
             width: calc(397/495*100%);
             margin: 50px auto 0;
+            @media (max-width:1000px) {
+                display: none;
+            }
         }
         .contact{
             margin-top: 100px;
@@ -790,6 +1130,11 @@ nav.contact{
         padding: 20px;
         box-shadow: inset 0 0 1px 1px #B68E66;
         border: 10px solid #42526C;
+        @media (max-width:1000px) {
+            width: 90%;
+            float: unset;
+            margin: 20px auto 0;
+        }
         .formBoxTop{
             border-bottom: 1px solid #B68E66;
             margin: 0 10px;
@@ -1122,6 +1467,36 @@ footer{
         margin-bottom: -4px;
     }
 }
+.slider_photo_s3{
+    position: relative;
+    margin-bottom: 0;
+    .slick-prev{
+        display: none;
+        left: -100%;
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/arrow_s4.svg);
+        transform: translateX(-50%);
+        &:before{
+            content: "";
+        }
+    }
+    .slick-next{
+        right: 8%;
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        background-image: url(../img/arrow_s4.svg);
+        transform: scaleX(-1) translateX(-50%);
+        &:before{
+            content: "";
+        }
+    }
+    &.slick-dotted.slick-slider{
+        margin-bottom: 0;
+    }
+} 
 .photoBox:nth-child(odd){
     .slider_photo_s4{
         position: relative;
