@@ -42,7 +42,7 @@
 						<img src="img/main_title_light.svg" alt="">
 					</h2>
 				</div>
-				<div class="txtBox dark">
+				<div class="txtBox dark" style="display: none;">
 					<h1>
 						<img class="pc" src="img/logo_dark.svg" alt="">
 						<img class="mob" src="img/logo_dark_mob.svg" alt="">
@@ -50,7 +50,7 @@
 					<h2><img src="img/main_title_dark.svg" alt=""></h2>
 				</div>
 			</div>
-			<div class="slider">
+			<div class="slider11111">
 				<div class="item">
 					<div class="imgBox kvimg">
 						<img class="pc" src="img/main_img_light.jpg" alt="">
@@ -623,6 +623,7 @@
 			dots: false
 		});
 
+
 		$('.slider').slick({
 			infinite: true,
 			autoplay: true,
@@ -633,7 +634,30 @@
 			arrows: false,
 			dots: false
 		});
-		
+
+		$('.slider11111').slick({
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			// fade: true,
+			arrows: false,
+			dots: false
+		});
+
+		$('.slider11111').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			if(nextSlide == 1){
+				$(".txtBox.light").fadeOut(300,()=>{
+					$(".txtBox.dark").fadeIn(100)
+				})
+			}else{
+
+				$(".txtBox.dark").fadeOut(300,()=>{
+					$(".txtBox.light").fadeIn(100)
+				})
+			}
+		});
 		// if ($('.slick-slide').hasClass('slick-active')) {
 		// 		$('.kvimg').addClass('wow fadeInLeft');
 		// 	} else {
