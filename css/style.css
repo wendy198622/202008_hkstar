@@ -84,6 +84,43 @@ section p {
   width: 100%;
 }
 
+.mainBox .txtBox {
+  width: calc(500/1920*100%);
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: calc(440/1920*100%);
+}
+
+@media (max-width: 1000px) {
+  .mainBox .txtBox {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.mainBox .txtBox h1 {
+  width: calc(411/535*100%);
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .mainBox .txtBox h1 {
+    width: 46%;
+  }
+}
+
+.mainBox .txtBox h2, .mainBox .txtBox img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .mainBox .txtBox h2, .mainBox .txtBox img {
+    width: 85%;
+  }
+}
+
 .mainBox .item {
   width: 100%;
   margin: 0 auto;
@@ -93,43 +130,6 @@ section p {
 
 .mainBox .item .imgBox {
   width: 100%;
-}
-
-.mainBox .item .txtBox {
-  width: calc(500/1920*100%);
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: calc(440/1920*100%);
-}
-
-@media (max-width: 1000px) {
-  .mainBox .item .txtBox {
-    width: 100%;
-    left: 0;
-  }
-}
-
-.mainBox .item .txtBox h1 {
-  width: calc(411/535*100%);
-  margin: 0 auto;
-}
-
-@media (max-width: 1000px) {
-  .mainBox .item .txtBox h1 {
-    width: 46%;
-  }
-}
-
-.mainBox .item .txtBox h2, .mainBox .item .txtBox img {
-  width: 100%;
-  margin: 0 auto;
-}
-
-@media (max-width: 1000px) {
-  .mainBox .item .txtBox h2, .mainBox .item .txtBox img {
-    width: 85%;
-  }
 }
 
 header {
@@ -992,6 +992,7 @@ nav.contact ul li:hover {
     float: unset;
     margin-right: 4%;
     margin-top: 7%;
+    display: none;
   }
 }
 
@@ -1105,6 +1106,21 @@ nav.contact ul li:hover {
     width: 100%;
     float: unset;
     margin-right: 0;
+  }
+}
+
+.section6 .imgGroup .mobimgBox .imgBox {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .section6 .imgGroup .mobimgBox .imgBox {
+    width: 90%;
+    height: 0;
+    padding-bottom: 70%;
+    display: block;
+    margin-left: 5%;
+    background-attachment: fixed;
   }
 }
 

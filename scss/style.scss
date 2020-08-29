@@ -54,6 +54,32 @@ section{
 }
 .mainBox{
     width: 100%;
+
+    .txtBox{
+        width: calc(500/1920*100%);
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: calc(440/1920*100%);
+        @media (max-width:1000px) {
+            width: 100%;
+            left: 0;
+        }
+        h1{
+            width: calc(411/535*100%);
+            margin: 0 auto;
+            @media (max-width:1000px) {
+                width: 46%
+            }
+        }
+        h2, img{
+            width: 100%;
+            margin: 0 auto;
+            @media (max-width:1000px) {
+                width: 85%
+            }
+        }
+    }
     .item{
         width: 100%;
         margin: 0 auto;
@@ -61,31 +87,6 @@ section{
         position: relative;    
         .imgBox{
             width: 100%;        
-        }
-        .txtBox{
-            width: calc(500/1920*100%);
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            left: calc(440/1920*100%);
-            @media (max-width:1000px) {
-                width: 100%;
-                left: 0;
-            }
-            h1{
-                width: calc(411/535*100%);
-                margin: 0 auto;
-                @media (max-width:1000px) {
-                    width: 46%
-                }
-            }
-            h2, img{
-                width: 100%;
-                margin: 0 auto;
-                @media (max-width:1000px) {
-                    width: 85%
-                }
-            }
         }
     }
 
@@ -746,6 +747,7 @@ nav.contact{
                     float: unset;
                     margin-right: 4%;
                     margin-top: 7%;
+                    display: none;
                 }
                 img{
                     position: relative;
@@ -831,6 +833,21 @@ nav.contact{
                         margin-right: 0;
                     }
                 }
+            }
+        }
+        .mobimgBox{
+            .imgBox{
+                display: none;
+                @media (max-width:1000px) {
+                    width: 90%;
+                    height: 0;
+                    padding-bottom: 70%;
+                    // outline: 1px solid red;
+                    display: block;
+                    margin-left: 5%;
+                    background-attachment: fixed;
+                }
+
             }
         }
         p.desc{
