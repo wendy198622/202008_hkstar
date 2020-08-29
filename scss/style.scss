@@ -49,7 +49,7 @@ section{
         width: 1000px;
     }
     @media (max-width:1000px) {
-        max-width: 100%;
+        width: 100%;
     }
 }
 .mainBox{
@@ -223,7 +223,13 @@ nav.contact{
     background-color: #6A2259;
     border-radius: 40px;
     @media (max-width:1000px) {
-        display: none;
+        width: 100%;
+        top: unset;
+        bottom: 0;
+        border-radius: 0;
+        right: 0;
+        border-top: 1px solid #ffffff;
+        padding-bottom: 10px;
     }
     ul{
         padding: 15px 10px;
@@ -231,6 +237,12 @@ nav.contact{
             text-align: center;
             border-bottom: 1px solid #B68E66;
             padding: 15px 0;
+            @media (max-width:1000px) {
+                width: 25%;
+                float: left;
+                border-bottom: 0;
+                border-right: 1px solid #B68E66;
+            }
             img{
                 width: 40px;
                 margin: 0 auto;
@@ -242,6 +254,9 @@ nav.contact{
 
             &:last-child{
                 border-bottom: 0;
+                @media (max-width:1000px) {
+                    border-right: 0;
+                }
             }
 
             &:hover{
@@ -667,6 +682,9 @@ nav.contact{
         h3{
             width: 48%;
             float: left;
+            @media (max-width:1000px) {
+                width: 100%;
+            }
             &.en{ 
                 width: 52%;
                 float: right;
@@ -735,36 +753,34 @@ nav.contact{
         }
         .imgBox{
             display: table;
+            @media (max-width:1000px) {
+                display: block;
+                // overflow: hidden;
+            }
             &:nth-child(1){
                 width: calc(1074/1400*100%);
+                height: 0;
+                padding-bottom: 70%;
                 float: right;
+                background: url(../img/section6_img2.jpg) right top no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
                 margin-top: -7%;
                 margin-bottom: 30px;
                 position: relative;
                 z-index: 2;
                 @media (max-width:1000px) {
-                    width: 92%;
+                    width: 98%;
+                    padding-bottom: 78%;
+                    background-size: 100% auto;
+                    background-attachment: scroll;
+                    margin-top: 15%;
                     float: unset;
-                    margin-right: 4%;
-                    margin-top: 7%;
-                    display: none;
+                    margin: 10% auto 0;
                 }
                 img{
                     position: relative;
                     z-index: 2;
-                }
-                &:after{
-                    content: "";
-                    width: 100%;
-                    height: 0;
-                    padding-bottom: 78%;
-                    position: absolute;
-                    z-index: 1;
-                    right: -10px;
-                    bottom: -10px;
-                    background-color: #B78E66;
-                    box-shadow: 2px 2px 5px rgba(0,0,0,.6);
-                    
                 }
             }
             &:nth-child(2){
@@ -775,10 +791,12 @@ nav.contact{
                 position: relative;
                 z-index: 3;
                 @media (max-width:1000px) {
-                    width: 96%;
+                    width: 98%;
+                    padding-bottom: 22%;
                     margin-top: -10%;
                     margin-right: 4%;
-                    margin-bottom: 30px;
+                    // margin-bottom: 50px;
+                    float: none;
                 }
                 img{
                     position: relative;
@@ -795,8 +813,9 @@ nav.contact{
                     padding: 0px 10px 20px 30px;
                     @media (max-width:1000px) {
                         padding-left: 52%;
-                        padding-top: 14%;
+                        padding-top: 20%;
                         font-size: 16px;
+                        // width: 86%;
                     }
                 }
                 &:after{
@@ -811,8 +830,9 @@ nav.contact{
                     background-color: #B78E66;
                     box-shadow: 2px 2px 5px rgba(0,0,0,.6);
                     @media (max-width:1000px) {
-                        width: 97%;
+                        width: 95%;
                         bottom: -10px;
+                        right: 0;
                     }
                     
                 }
@@ -839,15 +859,17 @@ nav.contact{
             .imgBox{
                 display: none;
                 @media (max-width:1000px) {
-                    width: 90%;
+                    width: 94%;
                     height: 0;
                     padding-bottom: 70%;
                     // outline: 1px solid red;
-                    display: block;
-                    margin-left: 5%;
+                    float: unset;
+                    margin-right: 0;
+                    margin-top: 2%;
+                    margin-left: 3%;
                     background-attachment: fixed;
+                    display: block;
                 }
-
             }
         }
         p.desc{
@@ -878,6 +900,7 @@ nav.contact{
         display: none;
         @media (max-width:1000px) {
             display: block;
+            margin-top: 20px;
         }
         p.desc{
             max-width: 1400px;
@@ -918,6 +941,9 @@ nav.contact{
         }
         h3{
             float: left;
+            @media (max-width:1000px) {
+                width: 100%;
+            }
             &.en{ 
                 float: right;
                 @media (max-width:1000px) {
@@ -1113,6 +1139,9 @@ nav.contact{
                 width: 60%;
                 padding: 5% 10%;
             }
+            @media (max-width:768px) {
+                width: 100%;
+            }
         }
     }
     .imgBox{
@@ -1180,6 +1209,7 @@ nav.contact{
     .txtBox{
         width: calc(495/1400*100%);
         float: left;
+        margin-left: 20px;
         @media (max-width:1000px) {
             width: 90%;
             float: unset;
@@ -1218,11 +1248,22 @@ nav.contact{
         .formBoxTop{
             border-bottom: 1px solid #B68E66;
             margin: 0 10px;
+            @media (max-width:1000px) {
+                width: calc(100% - 20px);
+                box-sizing: border-box;
+            }
             .formTitle{
                 width: calc(351/580*100%);
                 margin-top: 20px;
                 margin-bottom: 10px;
                 margin-left: 10px;
+                @media (max-width:1000px) {
+                    width: 100%;
+                    margin-left: 0;
+                    img{
+                        margin-bottom: 30px;
+                    }
+                }
             }
 
         }
@@ -1244,6 +1285,10 @@ nav.contact{
                 &.half{
                     width: 48%;
                     margin-right: 4%;
+                    @media (max-width:1000px) {
+                        width: 100%;
+                        margin-right: 0;
+                    }
                     &:nth-child(2){
                         margin-right: 0;
                     }
@@ -1776,6 +1821,9 @@ footer{
         height: 40px;
         background-image: url(../img/arrow_s7.svg);
         transform: scaleX(-1) translate(0,-50%);
+        @media (max-width:1000px) {
+            top: 40%;
+        }
         &:before{
             content: "";
         }

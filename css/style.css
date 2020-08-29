@@ -76,7 +76,7 @@ section p {
 
 @media (max-width: 1000px) {
   .container {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -294,7 +294,13 @@ nav.contact {
 
 @media (max-width: 1000px) {
   nav.contact {
-    display: none;
+    width: 100%;
+    top: unset;
+    bottom: 0;
+    border-radius: 0;
+    right: 0;
+    border-top: 1px solid #ffffff;
+    padding-bottom: 10px;
   }
 }
 
@@ -306,6 +312,15 @@ nav.contact ul li {
   text-align: center;
   border-bottom: 1px solid #B68E66;
   padding: 15px 0;
+}
+
+@media (max-width: 1000px) {
+  nav.contact ul li {
+    width: 25%;
+    float: left;
+    border-bottom: 0;
+    border-right: 1px solid #B68E66;
+  }
 }
 
 nav.contact ul li img {
@@ -320,6 +335,12 @@ nav.contact ul li span {
 
 nav.contact ul li:last-child {
   border-bottom: 0;
+}
+
+@media (max-width: 1000px) {
+  nav.contact ul li:last-child {
+    border-right: 0;
+  }
 }
 
 nav.contact ul li:hover {
@@ -893,6 +914,12 @@ nav.contact ul li:hover {
   float: left;
 }
 
+@media (max-width: 1000px) {
+  .section6 .txtBox h3 {
+    width: 100%;
+  }
+}
+
 .section6 .txtBox h3.en {
   width: 52%;
   float: right;
@@ -977,9 +1004,20 @@ nav.contact ul li:hover {
   display: table;
 }
 
+@media (max-width: 1000px) {
+  .section6 .imgGroup .imgBox {
+    display: block;
+  }
+}
+
 .section6 .imgGroup .imgBox:nth-child(1) {
   width: calc(1074/1400*100%);
+  height: 0;
+  padding-bottom: 70%;
   float: right;
+  background: url(../img/section6_img2.jpg) right top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   margin-top: -7%;
   margin-bottom: 30px;
   position: relative;
@@ -988,31 +1026,19 @@ nav.contact ul li:hover {
 
 @media (max-width: 1000px) {
   .section6 .imgGroup .imgBox:nth-child(1) {
-    width: 92%;
+    width: 98%;
+    padding-bottom: 78%;
+    background-size: 100% auto;
+    background-attachment: scroll;
+    margin-top: 15%;
     float: unset;
-    margin-right: 4%;
-    margin-top: 7%;
-    display: none;
+    margin: 10% auto 0;
   }
 }
 
 .section6 .imgGroup .imgBox:nth-child(1) img {
   position: relative;
   z-index: 2;
-}
-
-.section6 .imgGroup .imgBox:nth-child(1):after {
-  content: "";
-  width: 100%;
-  height: 0;
-  padding-bottom: 78%;
-  position: absolute;
-  z-index: 1;
-  right: -10px;
-  bottom: -10px;
-  background-color: #B78E66;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .section6 .imgGroup .imgBox:nth-child(2) {
@@ -1026,10 +1052,11 @@ nav.contact ul li:hover {
 
 @media (max-width: 1000px) {
   .section6 .imgGroup .imgBox:nth-child(2) {
-    width: 96%;
+    width: 98%;
+    padding-bottom: 22%;
     margin-top: -10%;
     margin-right: 4%;
-    margin-bottom: 30px;
+    float: none;
   }
 }
 
@@ -1055,7 +1082,7 @@ nav.contact ul li:hover {
 @media (max-width: 1000px) {
   .section6 .imgGroup .imgBox:nth-child(2) p {
     padding-left: 52%;
-    padding-top: 14%;
+    padding-top: 20%;
     font-size: 16px;
   }
 }
@@ -1076,8 +1103,9 @@ nav.contact ul li:hover {
 
 @media (max-width: 1000px) {
   .section6 .imgGroup .imgBox:nth-child(2):after {
-    width: 97%;
+    width: 95%;
     bottom: -10px;
+    right: 0;
   }
 }
 
@@ -1115,12 +1143,15 @@ nav.contact ul li:hover {
 
 @media (max-width: 1000px) {
   .section6 .imgGroup .mobimgBox .imgBox {
-    width: 90%;
+    width: 94%;
     height: 0;
     padding-bottom: 70%;
-    display: block;
-    margin-left: 5%;
+    float: unset;
+    margin-right: 0;
+    margin-top: 2%;
+    margin-left: 3%;
     background-attachment: fixed;
+    display: block;
   }
 }
 
@@ -1159,6 +1190,7 @@ nav.contact ul li:hover {
 @media (max-width: 1000px) {
   .section6 .mobsliderBox {
     display: block;
+    margin-top: 20px;
   }
 }
 
@@ -1206,6 +1238,12 @@ nav.contact ul li:hover {
 
 .section7 .txtBox h3 {
   float: left;
+}
+
+@media (max-width: 1000px) {
+  .section7 .txtBox h3 {
+    width: 100%;
+  }
 }
 
 .section7 .txtBox h3.en {
@@ -1440,6 +1478,12 @@ nav.contact ul li:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .section8 .txtBox p {
+    width: 100%;
+  }
+}
+
 .section8 .imgBox {
   width: calc(1157/1920*100%);
   float: left;
@@ -1526,6 +1570,7 @@ nav.contact ul li:hover {
 .section9 .txtBox {
   width: calc(495/1400*100%);
   float: left;
+  margin-left: 20px;
 }
 
 @media (max-width: 1000px) {
@@ -1582,11 +1627,29 @@ nav.contact ul li:hover {
   margin: 0 10px;
 }
 
+@media (max-width: 1000px) {
+  .section9 .formBox .formBoxTop {
+    width: calc(100% - 20px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
 .section9 .formBox .formBoxTop .formTitle {
   width: calc(351/580*100%);
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 10px;
+}
+
+@media (max-width: 1000px) {
+  .section9 .formBox .formBoxTop .formTitle {
+    width: 100%;
+    margin-left: 0;
+  }
+  .section9 .formBox .formBoxTop .formTitle img {
+    margin-bottom: 30px;
+  }
 }
 
 .section9 .formBox .formContent {
@@ -1612,6 +1675,13 @@ nav.contact ul li:hover {
 .section9 .formBox .formContent .line.half {
   width: 48%;
   margin-right: 4%;
+}
+
+@media (max-width: 1000px) {
+  .section9 .formBox .formContent .line.half {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .section9 .formBox .formContent .line.half:nth-child(2) {
@@ -2227,6 +2297,12 @@ footer img {
   background-image: url(../img/arrow_s7.svg);
   -webkit-transform: scaleX(-1) translate(0, -50%);
           transform: scaleX(-1) translate(0, -50%);
+}
+
+@media (max-width: 1000px) {
+  .slider_photo_s7 .slick-next {
+    top: 40%;
+  }
 }
 
 .slider_photo_s7 .slick-next:before {

@@ -50,7 +50,7 @@
 					<h2><img src="img/main_title_dark.svg" alt=""></h2>
 				</div>
 			</div>
-			<div class="slider">
+			<div class="slidertop">
 				<div class="item">
 					<div class="imgBox kvimg">
 						<img class="pc" src="img/main_img_light.jpg" alt="">
@@ -360,15 +360,9 @@
 			</div>
 			<div class="imgGroup">
 				<h3><img class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s" src="img/section6_subtitle.svg" alt=""></h3>
-				
-				<div class="mobimgBox">
-					<div class="imgBox imgLiquidFill">
-						<img src="img/section6_img2.jpg" alt="">
-					</div>
-				</div>
 				<div class="container">
 					<div class="imgBox">
-						<img src="img/section6_img2.jpg" alt="">
+						<!-- <img src="img/section6_img2.jpg" alt=""> -->
 					</div>
 					<div class="imgBox">
 						<img src="img/section6_img1.jpg" alt="">
@@ -405,7 +399,10 @@
 		<section class="section7">
 			<div class="container">
 				<div class="txtBox">
-					<h3 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s"><img src="img/section7_title.svg" alt=""></h3>
+					<h3 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+						<img class="pc" src="img/section7_title.svg" alt="">
+						<img class="mob" src="img/section7_title_mob.svg" alt="">
+					</h3>
 					<h3 class="en wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s"><img src="img/section7_title_en.svg" alt=""></h3>
 				</div>
 			</div>
@@ -483,12 +480,12 @@
 				<div class="txtBox">
 					<div class="logo"><img src="img/logo_lg.svg" alt=""></div>
 					<div class="title"><img class="pc" src="img/section9_title.svg" alt=""></div>
-					<div class="contact"><img src="img/section9_contact.svg" alt=""></div>
+					<div class="contact"><img class="pc" src="img/section9_contact.svg" alt=""></div>
 				</div>
 				<div class="formBox">
 					<div class="formBoxTop">
 						<div class="formTitle">
-							<img class="mob" src="img/section9_title.svg" alt="">
+							<img class="mob" src="img/section9_contact.svg" alt="">
 							<img src="img/section9_formtitle.svg" alt="">
 						</div>
 					</div>
@@ -608,9 +605,9 @@
 
 		new WOW().init();
 
-		$(document).ready(function() {
- 			$(".imgLiquidFill").imgLiquid();
-		});
+		// $(document).ready(function() {
+ 		// 	$(".imgLiquidFill").imgLiquid();
+		// });
 		
 		$('.slidertop').slick({
 			infinite: true,
@@ -618,7 +615,7 @@
 			autoplaySpeed: 3000,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			fade: true,
+			// fade: true,
 			arrows: false,
 			dots: false
 		});
