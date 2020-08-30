@@ -229,10 +229,13 @@ nav.contact{
         border-radius: 0;
         right: 0;
         border-top: 1px solid #ffffff;
-        padding-bottom: 10px;
+        padding: 10px 0;
     }
     ul{
         padding: 15px 10px;
+        @media (max-width:1000px) {
+            padding: 0 10px;
+        }
         li{
             text-align: center;
             border-bottom: 1px solid #B68E66;
@@ -241,17 +244,21 @@ nav.contact{
                 width: 25%;
                 float: left;
                 border-bottom: 0;
+                padding: 0;
                 border-right: 1px solid #B68E66;
             }
             img{
                 width: 40px;
                 margin: 0 auto;
             }
-            span{
-                color: #ffffff;
+            a,span{
+                width: 100%;
+                height: 100%;
+                display: block;
+                color: #fff;
                 font-size: 14px;
             }
-
+            
             &:last-child{
                 border-bottom: 0;
                 @media (max-width:1000px) {
@@ -468,6 +475,7 @@ nav.contact{
             margin-top: 0;
         }
         h3{
+            width: calc(416/1400*100%);
             float: left;
             margin-top: 3.8%;
             @media (max-width:1000px) {
@@ -476,9 +484,12 @@ nav.contact{
                 margin-left: 10%;
             }
             &.en{ 
+                width: calc(940/1400*100%);
                 float: right;
                 margin-top: 0;
-                display: none;
+                @media (max-width:1000px) {
+                    display: none;
+                }
             }
         }
     }
@@ -491,6 +502,9 @@ nav.contact{
             @media (max-width:1000px) {
                 position: relative;
                 background-color: #fff;
+                &:first-child{
+                    padding-top: 20px;
+                }
             }
             .txtBox{
                 width: calc(600/1400*100%);
@@ -679,14 +693,14 @@ nav.contact{
             width: 90%;
             margin-left: 10%;
         }
-        h3{
-            width: 48%;
+        h3{            
+            width: calc(630/1400*100%);
             float: left;
             @media (max-width:1000px) {
                 width: 100%;
             }
             &.en{ 
-                width: 52%;
+                width: calc(750/1400*100%);
                 float: right;
                 @media (max-width:1000px) {
                     display: none;
@@ -758,25 +772,25 @@ nav.contact{
                 // overflow: hidden;
             }
             &:nth-child(1){
-                width: calc(1074/1400*100%);
+                width: 70%;
                 height: 0;
-                padding-bottom: 70%;
+                padding-bottom: 55%;
                 float: right;
                 background: url(../img/section6_img2.jpg) right top no-repeat;
-                background-size: cover;
-                background-attachment: fixed;
+                background-size: 100% auto;
                 margin-top: -7%;
                 margin-bottom: 30px;
                 position: relative;
                 z-index: 2;
                 @media (max-width:1000px) {
                     width: 98%;
-                    padding-bottom: 78%;
+                    padding-bottom: 50%;
                     background-size: 100% auto;
                     background-attachment: scroll;
                     margin-top: 15%;
                     float: unset;
                     margin: 10% auto 0;
+                    background-attachment: fixed;
                 }
                 img{
                     position: relative;
@@ -794,7 +808,7 @@ nav.contact{
                     width: 98%;
                     padding-bottom: 22%;
                     margin-top: -10%;
-                    margin-right: 4%;
+                    margin-right: 0;
                     // margin-bottom: 50px;
                     float: none;
                 }
@@ -802,8 +816,9 @@ nav.contact{
                     position: relative;
                     z-index: 2;
                     @media (max-width:1000px) {
-                        width: 50%;
+                        width: 100%;
                         float: left;
+                        margin-right: 0;
                     }
                 }
                 p{
@@ -812,10 +827,26 @@ nav.contact{
                     color: #fff;
                     padding: 0px 10px 20px 30px;
                     @media (max-width:1000px) {
-                        padding-left: 52%;
-                        padding-top: 20%;
+                        width: 40%;
+                        padding-left: 0;
+                        padding-top: 0;
                         font-size: 16px;
+                        position: absolute;
+                        top: 50%;
+                        left: 55%;
                         // width: 86%;
+                    }
+                    @media (max-width:640px) {
+                        width: 45%;
+                    }
+                    @media (max-width:420px) {
+                        top: 40%;
+                    }
+                    @media (max-width:380px) {
+                        top: 30%;
+                    }
+                    @media (max-width:340px) {
+                        top: 20%;
                     }
                 }
                 &:after{
@@ -833,6 +864,7 @@ nav.contact{
                         width: 95%;
                         bottom: -10px;
                         right: 0;
+                        display: none;
                     }
                     
                 }
@@ -940,11 +972,13 @@ nav.contact{
             margin-left: 10%;
         }
         h3{
+            width: calc(448/1400*100%);
             float: left;
             @media (max-width:1000px) {
                 width: 100%;
             }
             &.en{ 
+                width: calc(925/1400*100%);
                 float: right;
                 @media (max-width:1000px) {
                     display: none;
@@ -962,13 +996,13 @@ nav.contact{
                 padding: 0 20px;
                 p{
                     position: absolute;
-                    width: 308px;
+                    width: 370px;
                     padding: 20px;
                     left: 2px;
                     bottom: 5%;
                     background-color: #6A2259;
                     color: #fff;
-                    font-size: 14px;
+                    font-size: 18px;
                     font-weight: normal;
                     @media (max-width:1000px) {
                         width: 90%;
@@ -978,6 +1012,7 @@ nav.contact{
                         color: #000;
                         position: relative;
                         padding: 20px 0;
+                        font-size: 16px;
                         &:before{
                             content: "";
                             width: 100px;
@@ -1122,9 +1157,20 @@ nav.contact{
             position: absolute;
             top: -25%;
         }
+        @media (max-width:768px) {
+            top: -18%;
+        }
+        @media (max-width:584px) {
+            top: -12%;
+        }
+        @media (max-width:420px) {
+            top: -10%;
+        }
         h3{
             width: 60%;
-            margin-left: 10%;
+            @media (max-width:1000px) {
+                margin-left: 10%;
+            }
         }
         h3.en{
             width: calc(464/563*100%);
@@ -1135,12 +1181,20 @@ nav.contact{
         p{ 
             width: calc(500/563*100%);
             color: #fff;
+            &.pc{ display: block;}
+            &.mob{ display: none;}
             @media (max-width:1000px) {
                 width: 60%;
                 padding: 5% 10%;
+                &.pc{ display: none;}
+                &.mob{ display: block;}
             }
             @media (max-width:768px) {
                 width: 100%;
+                padding: 3% 10%;
+            }
+            @media (max-width:584px) {
+                padding: 0% 10%;
             }
         }
     }
@@ -1152,7 +1206,10 @@ nav.contact{
             width: 100%;
             float: unset;
             padding: 0;
-            margin-top: 10%;
+            margin-top: 20%;
+        }
+        @media (max-width:1000px) {
+            margin-top: 26%;
         }
         &:before{
             content: "";
@@ -1183,6 +1240,9 @@ nav.contact{
     padding-top: 120px;
     padding-bottom: 120px;
     overflow: hidden;
+    @media (max-width:1000px) {
+        padding-bottom: 2%;
+    }
     &:before{
         content: "";
         width: 100%;
@@ -1197,7 +1257,7 @@ nav.contact{
 
         }
         @media (max-width:1000px) {
-            height: 75%;
+            height: 42%;
         }
     }
     .container{
@@ -1261,7 +1321,12 @@ nav.contact{
                     width: 100%;
                     margin-left: 0;
                     img{
-                        margin-bottom: 30px;
+                        margin-bottom: 10%;
+                        &.res{
+                            width: 70%;
+                            margin-left: 0;
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
@@ -1378,6 +1443,12 @@ footer{
         width: auto;
         margin: 30px auto;
     }
+    @media (max-width:1000px) {
+        margin: 0 auto 70px;
+        background-color: #6A2259;
+        width: 100%;
+        padding: 10px 10% 20px;
+    }
 }
 // .goTop{
 //     width: calc(59/1920*100%);
@@ -1434,6 +1505,12 @@ footer{
             to{
                 height: 0%;
             }
+        }
+    }
+    &.pc{ 
+        display: block;
+        @media (max-width:1000px){
+            display: none;
         }
     }
 }
@@ -1566,10 +1643,18 @@ footer{
             height: 15px;
             padding: 0;
             margin-right: 10px;
+            @media (max-width:640px) {
+                width: 10px;
+                height: 10px;
+            }
             button{
                 width: 15px;
                 height: 15px;
                 padding: 0;
+                @media (max-width:640px) {
+                    width: 10px;
+                    height: 10px;
+                }
                 &:before{
                     border: 2px solid #42526C;
                     border-radius: 100%;
@@ -1577,6 +1662,10 @@ footer{
                     height: 15px;
                     opacity: 1;
                     color: transparent;
+                    @media (max-width:640px) {
+                        width: 10px;
+                        height: 10px;
+                    }
                 }
             }
 
@@ -1654,18 +1743,27 @@ footer{
             bottom: 20px;
             text-align: left;
             padding-left: 20px;
-            @media (max-width:600px) {
+            @media (max-width:640px) {
                 text-align: right;
+                bottom: 10px;
             }
             li{
                 width: 15px;
                 height: 15px;
                 padding: 0;
                 margin-right: 10px;
+                @media (max-width:640px) {
+                    width: 10px;
+                    height: 10px;
+                }
                 button{
                     width: 15px;
                     height: 15px;
                     padding: 0;
+                    @media (max-width:640px) {
+                        width: 10px;
+                        height: 10px;
+                    }
                     &:before{
                         border: 2px solid #42526C;
                         background-color: #fff;
@@ -1674,6 +1772,10 @@ footer{
                         height: 15px;
                         opacity: 1;
                         color: transparent;
+                        @media (max-width:640px) {
+                            width: 10px;
+                            height: 10px;
+                        }
                     }
                 }
 
@@ -1722,18 +1824,27 @@ footer{
             bottom: 20px;
             text-align: right;
             padding-right: 20px;
-            @media (max-width:600px) {
+            @media (max-width:640px) {
                 text-align: left;
+                bottom: 10px;
             }
             li{
                 width: 15px;
                 height: 15px;
                 padding: 0;
                 margin-right: 10px;
+                @media (max-width:640px) {
+                    width: 10px;
+                    height: 10px;
+                }
                 button{
                     width: 15px;
                     height: 15px;
                     padding: 0;
+                    @media (max-width:640px) {
+                        width: 10px;
+                        height: 10px;
+                    }
                     &:before{
                         border: 2px solid #6A2259;
                         background-color: #fff;
@@ -1742,6 +1853,10 @@ footer{
                         height: 15px;
                         opacity: 1;
                         color: transparent;
+                        @media (max-width:640px) {
+                            width: 10px;
+                            height: 10px;
+                        }
                     }
                 }
 
@@ -1771,10 +1886,18 @@ footer{
             height: 15px;
             padding: 0;
             margin-right: 10px;
+            @media (max-width:640px) {
+                width: 10px;
+                height: 10px;
+            }
             button{
                 width: 15px;
                 height: 15px;
                 padding: 0;
+                @media (max-width:640px) {
+                    width: 10px;
+                    height: 10px;
+                }
                 &:before{
                     border: 2px solid #42526C;
                     background-color: #fff;
@@ -1783,6 +1906,10 @@ footer{
                     height: 15px;
                     opacity: 1;
                     color: transparent;
+                    @media (max-width:640px) {
+                        width: 10px;
+                        height: 10px;
+                    }
                 }
             }
 
@@ -1838,10 +1965,18 @@ footer{
             height: 15px;
             padding: 0;
             margin-right: 10px;
+            @media (max-width:640px) {
+                width: 10px;
+                height: 10px;
+            }
             button{
                 width: 15px;
                 height: 15px;
                 padding: 0;
+                @media (max-width:640px) {
+                    width: 10px;
+                    height: 10px;
+                }
                 &:before{
                     border: 2px solid #42526C;
                     background-color: #fff;
@@ -1850,6 +1985,10 @@ footer{
                     height: 15px;
                     opacity: 1;
                     color: transparent;
+                    @media (max-width:640px) {
+                        width: 10px;
+                        height: 10px;
+                    }
                 }
             }
 
